@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="gTV-IL-0wX" customClass="ItemCell" customModule="JustWatch_Combine" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgY-FU-BGU">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WpE-pe-Jtn">
+                                <rect key="frame" x="20" y="0.0" width="110" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="r5N-ff-Lc6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-np-FCg">
+                                <rect key="frame" x="8" y="130" width="134" height="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gec-np-FCg" secondAttribute="trailing" constant="8" id="1rb-Hr-ddt"/>
+                            <constraint firstItem="gec-np-FCg" firstAttribute="leading" secondItem="FgY-FU-BGU" secondAttribute="leading" constant="8" id="2nt-wG-Fiv"/>
+                            <constraint firstItem="WpE-pe-Jtn" firstAttribute="leading" secondItem="FgY-FU-BGU" secondAttribute="leading" constant="20" id="ElV-NL-tFZ"/>
+                            <constraint firstAttribute="bottom" secondItem="gec-np-FCg" secondAttribute="bottom" id="GWb-k7-KKb"/>
+                            <constraint firstAttribute="trailing" secondItem="WpE-pe-Jtn" secondAttribute="trailing" constant="20" id="Rlo-Bf-XMW"/>
+                            <constraint firstItem="WpE-pe-Jtn" firstAttribute="top" secondItem="FgY-FU-BGU" secondAttribute="top" id="fDc-Da-JLZ"/>
+                            <constraint firstItem="gec-np-FCg" firstAttribute="top" secondItem="WpE-pe-Jtn" secondAttribute="bottom" id="wgb-FT-0Pk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="FgY-FU-BGU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0gg-cl-DL7"/>
+                <constraint firstAttribute="bottom" secondItem="FgY-FU-BGU" secondAttribute="bottom" id="FYp-E9-xQm"/>
+                <constraint firstAttribute="trailing" secondItem="FgY-FU-BGU" secondAttribute="trailing" id="SaK-cs-bg4"/>
+                <constraint firstItem="FgY-FU-BGU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="beq-wM-nbg"/>
+            </constraints>
+            <connections>
+                <outlet property="posterImage" destination="WpE-pe-Jtn" id="TKR-pt-rgk"/>
+                <outlet property="titleLabel" destination="gec-np-FCg" id="aQL-uc-cnW"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="130"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
